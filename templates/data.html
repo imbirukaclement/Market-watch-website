@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi Datasets</title>
+    <link rel="icon" href="../static/imgs/b83fd4bfe1b2cd2c13381166ddc2e895.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../static/imgs/a4a66165d95cff5b2b95d1fe85847b62.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../static/imgs/9f4d793ab5960f8a37a10fa1d286ef34.png" sizes="180x180">
+    <link rel="stylesheet" href="../static/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&amp;family=Ubuntu:wght@300&amp;display=swap"
+          rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/ea4badf3aa.js"></script>
+</head>
+<body>
+<div class="nv">
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="{{ url_for('home') }}" style="color:green; font-family:'Montserrat-Light';"><img
+                alt="image" id="icn" src="../static/imgs/9f4d793ab5960f8a37a10fa1d286ef34.png" style="width:40%;">Farmerce</a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('data')}}">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('nairobi_graph') }}">Market</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('weather_data') }}">Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('geo_data') }}">Satellite</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Nairobi Datasets</h1>
+</div>
+<br>
+<a href="javascript:goBack()" class="bt bt-left">Back</a>
+
+<div id="nairobi_table_1" class="show-table">
+    {{ nairobi_market[0] | safe }}
+</div>
+
+<div id="nairobi_table_2" class="show-table">
+    {{ nairobi_market[1] | safe }}
+</div>
+
+<div id="nairobi_table_3" class="show-table">
+    {{ nairobi_market[2] | safe }}
+</div>
+
+<div id="nairobi_table_4" class="show-table">
+    {{ nairobi_market[3] | safe }}
+</div>
+
+<div id="nairobi_table_5" class="show-table">
+    {{ nairobi_market[4] | safe }}
+</div>
+
+<div id="nairobi_table_6" class="show-table">
+    {{ nairobi_market[5] | safe }}
+</div>
+
+<div id="nairobi_table_7" class="show-table">
+    {{ nairobi_market[6] | safe }}
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+<script async src="../static/js/script.js"></script>
+</body>
+</html>

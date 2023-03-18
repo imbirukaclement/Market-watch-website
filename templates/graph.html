@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisumu Market</title>
+    <link rel="icon" href="../static/imgs/b83fd4bfe1b2cd2c13381166ddc2e895.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../static/imgs/a4a66165d95cff5b2b95d1fe85847b62.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../static/imgs/9f4d793ab5960f8a37a10fa1d286ef34.png" sizes="180x180">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&amp;family=Ubuntu:wght@300&amp;display=swap"
+          rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/ea4badf3aa.js"></script>
+</head>
+<body>
+    <div class="nv">
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="{{ url_for('home') }}" style="color:green; font-family:'Montserrat-Light';"><img
+                alt="image" id="icn" src="../static/imgs/9f4d793ab5960f8a37a10fa1d286ef34.png" style="width:40%;">Farmerce</a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('data')}}">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('nairobi_graph') }}">Market</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('weather_data') }}">Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('geo_data') }}">Satellite</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Kisumu Market</h1>
+</div>
+    <br>
+    <div class="page_2">
+        <p id='chart_2' class='chart_2'></p>
+        <a href="https://forms.office.com/r/hf6J89nnKw" target="_blank">Unlock Full Access</a>
+        <p id='chart_3' class='chart_3'></p>
+        <a href="https://forms.office.com/r/hf6J89nnKw" target="_blank">Unlock Full Access</a>
+        <p id='chart_4' class='chart_4'></p>
+        <a href="https://forms.office.com/r/hf6J89nnKw" target="_blank">Unlock Full Access</a>
+        <p id='chart_5' class='chart_5'></p>
+        <a href="https://forms.office.com/r/hf6J89nnKw" target="_blank">Unlock Full Access</a>
+        <p id='chart_6' class='chart_6'></p>
+        <a href="https://forms.office.com/r/hf6J89nnKw" target="_blank">Unlock Full Access</a>
+        <p id='chart_7' class='chart_7'></p>
+        <a href="https://forms.office.com/r/hf6J89nnKw" target="_blank">Unlock Full Access</a>
+        <p id='chart_8' class='chart_8'></p>
+        <a href="https://forms.office.com/r/hf6J89nnKw" target="_blank">Unlock Full Access</a>
+    </div>
+
+<script async src="../static/js/script.js"></script>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graph_1 = {{graphJSON_a | safe}};
+  Plotly.plot('chart_2',graph_1,{});
+  var graph_2 = {{graphJSON_b | safe}};
+  Plotly.plot('chart_3',graph_2,{});
+  var graph_3 = {{graphJSON_c| safe}};
+  Plotly.plot('chart_4',graph_3,{});
+  var graph_4 = {{graphJSON_d| safe}};
+  Plotly.plot('chart_5',graph_4,{});
+  var graph_5 = {{graphJSON_e| safe}};
+  Plotly.plot('chart_6',graph_5,{});
+  var graph_6 = {{graphJSON_f| safe}};
+  Plotly.plot('chart_7',graph_6,{});
+  var graph_7 = {{graphJSON_g| safe}};
+  Plotly.plot('chart_8',graph_7,{});
+</script>
+</body>
+</html>
